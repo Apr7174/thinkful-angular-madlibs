@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans';
+
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0px auto;
+	border: 3px solid #222;	
+}
+
+.smiley {
+	float: left;
+	padding: 10px;
+	border-right: 3px solid #222;
+
+}
+
+header img{
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+}
+
+header h1 {
+	text-align: center;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.inputs {
+	border-top: 3px solid #222;
+	padding: 20px;
+}
+
+.inputs input {
+	padding: 5px;
+	margin: 10px;
+}
+
+.outputs {
+	padding: 5px;
+	margin: 10px;
+}
+
+span {
+	text-decoration: underline;
+	color: red;
+}
