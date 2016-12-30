@@ -49,7 +49,12 @@ header h1 {
 	margin: 10px;
 }
 
+
 span {
 	text-decoration: underline;
 	color: red;
+}
+
+.center {
+	text-align: center;
 }
