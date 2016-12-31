@@ -15,4 +15,6 @@ angular.module('myApp', [])
 		$scope.changeGender = function() {
 			$scope.gender = 'male';
 		}
+
+		this.showParagraph = true;
 	});

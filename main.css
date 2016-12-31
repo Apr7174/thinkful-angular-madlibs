@@ -20,6 +20,10 @@ body {
 
 }
 
+header{
+	border-bottom: 3px solid #222;
+}
+
 header img{
 	margin: 0 auto;
 	padding: 0;
@@ -35,7 +39,6 @@ header h1 {
 }
 
 .inputs {
-	border-top: 3px solid #222;
 	padding: 20px;
 }
 
@@ -118,4 +121,23 @@ input:checked + .slider:before {
 	text-decoration: none;
 	padding: 10px;
 	margin-bottom: 10px;
+}
+
+button, .showPara{
+	padding: 6px 12px;
+	border-radius: 5px;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #e6e6e6;
+}
+
+.showPara {
+	margin: 20px;
+	display: inline-block;
+	float: right;
 }

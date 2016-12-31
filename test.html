@@ -2,6 +2,7 @@
 <html ng-app='formApp'>
 <head>
 	<title>Sample Angular JS</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
 	<script type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 </head>
@@ -22,6 +23,10 @@
 	<p>You are: {{formData.awake}}</p>
 
 	<p>{{she}} loved parts of her job, she absolutely hated</p>
+
+	<button ng-click="showBox = !showBox">Toggle</button>
+	<div class="box" ng-show="showBox">Box 1 ng-show</div>
+	<div class="box" ng-hide="showBox">Box 2 ng-hide</div>
 
 </body>
 </html>

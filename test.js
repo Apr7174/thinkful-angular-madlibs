@@ -4,4 +4,6 @@ var formApp=angular.module('formApp', [])
 
 		};
 		$scope.she = 'she';
+
+		$scope.showBox= true;
 	});
