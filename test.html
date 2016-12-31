@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='formApp'>
+<head>
+	<title>Sample Angular JS</title>
+	<script type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+</head>
+<body ng-controller='formController'>
+	<input type="text" name="name" ng-model="formData.name">
+	<p>Name is: {{formData.name}}</p>
+
+	<br>
+	<input type="radio" name="gender" value="female" ng-model="formData.gender">Female
+	<input type="radio" name="gender" value="male" ng-model="formData.gender">Male
+	<br>
+	<p>Gender is: {{formData.gender}}</p>
+
+	<br>
+	Are you awake?
+	<input type="checkbox" name="awake" ng-init="formData.awake='asleep'" ng-model="formData.awake" ng-true-value="awake" ng-false-value="asleep">
+	<br>
+	<p>You are: {{formData.awake}}</p>
+
+	<p>{{she}} loved parts of her job, she absolutely hated</p>
+
+</body>
+</html>

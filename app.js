@@ -9,4 +9,10 @@ angular.module('myApp', [])
 		$scope.celebrityTwo = 'another celebrity';
 		$scope.skill = 'skill';
 		$scope.number = 'number'
+
+		$scope.gender = 'f';
+
+		$scope.changeGender = function() {
+			$scope.gender = 'male';
+		}
 	});

@@ -28,7 +28,12 @@
 
 	    <div class="inputs">
 	    	<h2>Provide the following words:</h2>
-		    <input type="text" ng-model="femaleName">
+			<span class="gender">Female</span><label class="switch">
+				<input type="checkbox" ng-click="changeGender('m')">
+			  	<div class="slider"></div>
+			</label><span class="gender">Male</span>
+			<br>
+		    <input type="text" ng-model="name">
 		    <input type="text" ng-model="jobTitle">
 		    <input type="text" ng-model="tediousTask">
 		    <input type="text" ng-model="dirtyTask">
@@ -38,11 +43,12 @@
 		    <input type="text" ng-model="number">   
 	    </div>
         
+        
         <div class="outputs">    	
 		    <p>
-			    <span>{{femaleName}}</span> was a <span>{{jobTitle}}</span> who loved technology. 
+			    <span>{{name}}</span> was a <span>{{jobTitle}}</span> who loved technology. 
 			    Although she loved parts of her job, she absolutely hated  
-			    <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{femaleName}}</span> met
+			    <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{name}}</span> met
 			    with her life mentor <span>{{celebrity}}</span> who told her to learn how to
 			    <span>{{skill}}</span> with Thinkful. Thinkful didn't offer a course on
 			    {{skill}} so she studied programming instead. 
