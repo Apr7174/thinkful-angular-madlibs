@@ -1,20 +1,26 @@
 //creates a module
 angular.module('myApp', [])
 	.controller('MyController', function($scope){
-		this.name='person name';
-		this.jobTitle= 'job title';
-		this.tediousTask = 'tedious task';
-		this.dirtyTask = 'dirty task';
-		this.celebrity = 'celebrity';
-		this.celebrityTwo = 'another celebrity';
-		this.skill = 'skill';
-		this.number = 'number'
 
-		this.gender = 'f';
+		$scope.gender = {
+			she: "she",
+		};
 
-		$scope.changeGender = function() {
-			$scope.gender = 'male';
-		}
+		$scope.submitForm = function(){
+			this.showParagraph = !this.showParagraph;
+			
+		};
 
-		this.showParagraph = true;
+		$scope.startOver = function(){
+			this.showParagraph = !this.showParagraph;
+			this.name='';
+			this.jobTitle= '';
+			this.tediousTask = '';
+			this.dirtyTask = '';
+			this.celebrity = '';
+			this.celebrityTwo = '';
+			this.skill = '';
+			this.number = ''
+		};
+
 	});

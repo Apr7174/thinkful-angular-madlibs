@@ -19,45 +19,49 @@
     	</header>
 
 	    <div class="inputs" ng-show="!showParagraph">
-	    	<form name="madlibsInputs">	    		
+	    	<form name="madlibsInputs" ng-submit="submitForm()">	    		
 		    	<h2>Provide the following words:</h2>
-				<span class="gender">Female</span><label class="switch">
-					<input type="checkbox" ng-click="changeGender('m')">
-				  	<div class="slider"></div>
-				</label><span class="gender">Male</span>
+				 <span class="gender">Female</span><label class="switch">
+				 	<!-- todo  fix to include her/him and -->
+					 <input type="checkbox" ng-model="gender.she" ng-true-value="'he'" ng-false-value="'she'">
+				  	 <div class="slider"></div>
+				 </label><span class="gender">Male</span>
+				<br>
+				<!-- value {{gender.she}} -->
 				<br>
 			    <input type="text" placeholder="name" ng-model="name" required>
-			    <p ng-if="submitted && name.$error.required">Name is required</p>
 			    <input type="text" placeholder="job title" ng-model="jobTitle">
 			    <input type="text" placeholder="tedious task" ng-model="tediousTask">
 			    <input type="text" placeholder="dirty task" ng-model="dirtyTask">
 			    <input type="text" placeholder="celebrity" ng-model="celebrity">
 			    <input type="text" placeholder="another celebrity" ng-model="celebrityTwo">
 			    <input type="text" placeholder="a skill" ng-model="skill">   
-			    <input type="text" placeholder="a number" ng-model="number">   
+			    <input type="number" placeholder="a number" ng-model="number">   
 			    <br>
-			    <input type="submit" class="showPara" ng-click="showParagraph = !showParagraph" value="Generate My Madlib"/>
+			    <input type="submit" class="showPara" value="Generate My Madlib"/>
 	    	 	<div class="clearfix"></div>
 	    	</form>
 	    </div>
        
+	    <!--  -->	
+        <div class="outputs" ng-show="showParagraph">
+        	<form ng-submit="startOver()">        		
+			    <p>
+				    <span>{{name}}</span> was a <span>{{jobTitle}}</span> who loved technology. 
+				    Although {{gender.she}} loved parts of her job, {{gender.she}} absolutely hated  
+				    <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{name}}</span> met
+				    with her life mentor <span>{{celebrity}}</span> who told her to learn how to
+				    <span>{{skill}}</span> with Thinkful. Thinkful didn't offer a course on
+				    {{skill}} so {{gender.she}} studied programming instead. 
+				    What a great decision! With her new skills, <span>{{femaleName}}</span> built
+				    a(n) <span>{{adjective}}</span> robot named <span>{{celebrityTwo}}</span> that not 
+				    only loved <span>{{dirtyTask}}</span> but did it <span>{{number}}</span> times faster.
+			    </p>
 
-        <div class="outputs" ng-show="showParagraph">    	
-		    <p>
-			    <span>{{name}}</span> was a <span>{{jobTitle}}</span> who loved technology. 
-			    Although she loved parts of her job, she absolutely hated  
-			    <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{name}}</span> met
-			    with her life mentor <span>{{celebrity}}</span> who told her to learn how to
-			    <span>{{skill}}</span> with Thinkful. Thinkful didn't offer a course on
-			    {{skill}} so she studied programming instead. 
-			    What a great decision! With her new skills, <span>{{femaleName}}</span> built
-			    a(n) <span>{{adjective}}</span> robot named <span>{{celebrityTwo}}</span> that not 
-			    only loved <span>{{dirtyTask}}</span> but did it <span>{{number}}</span> times faster.
-		    </p>
-
-		    <button ng-click="showParagraph = !showParagraph">Start Over</button>
+			    <input type="submit" value="Start Over">
+        	</form>    	
         </div>
     </div>
-        <p class="center">Show and Hide</p>
+        <p class="center">Revised Local Scope</p>
 </body>
 </html>
