@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
-<body ng-controller="MyController">
+<body ng-controller="MyController as vm">
 
     <div class="container">
     
@@ -18,31 +18,32 @@
     		<div class="clearfix"></div>
     	</header>
 
-	    <div class="inputs" ng-show="!showParagraph">
-	    	<form name="madlibsInputs">	    		
+	    <div class="inputs" ng-show="!vm.showParagraph">
+	    	<form name="madlibsInputs" ng-submit="vm.submitForm()">	    		
 		    	<h2>Provide the following words:</h2>
 				<span class="gender">Female</span><label class="switch">
-					<input type="checkbox" ng-click="changeGender('m')">
+					<input type="checkbox">
 				  	<div class="slider"></div>
 				</label><span class="gender">Male</span>
+				<input type="checkbox" name="" ng-checked="vm.changeGender()">Hello
 				<br>
-			    <input type="text" placeholder="name" ng-model="name" required>
-			    <p ng-if="submitted && name.$error.required">Name is required</p>
-			    <input type="text" placeholder="job title" ng-model="jobTitle">
-			    <input type="text" placeholder="tedious task" ng-model="tediousTask">
-			    <input type="text" placeholder="dirty task" ng-model="dirtyTask">
-			    <input type="text" placeholder="celebrity" ng-model="celebrity">
-			    <input type="text" placeholder="another celebrity" ng-model="celebrityTwo">
-			    <input type="text" placeholder="a skill" ng-model="skill">   
-			    <input type="text" placeholder="a number" ng-model="number">   
+			    <input type="text" placeholder="name" ng-model="vm.name" required>
+			    <!-- <p ng-if="submitted && name.$error.required">Name is required</p> -->
+			    <input type="text" placeholder="job title" ng-model="vm.jobTitle">
+			    <input type="text" placeholder="tedious task" ng-model="vm.tediousTask">
+			    <input type="text" placeholder="dirty task" ng-model="vm.dirtyTask">
+			    <input type="text" placeholder="celebrity" ng-model="vm.celebrity">
+			    <input type="text" placeholder="another celebrity" ng-model="vm.celebrityTwo">
+			    <input type="text" placeholder="a skill" ng-model="vm.skill">   
+			    <input type="text" placeholder="a number" ng-model="vm.number">   
 			    <br>
-			    <input type="submit" class="showPara" ng-click="showParagraph = !showParagraph" value="Generate My Madlib"/>
+			    <input type="submit" class="showPara"  value="Generate My Madlib"/>
 	    	 	<div class="clearfix"></div>
 	    	</form>
 	    </div>
        
 
-        <div class="outputs" ng-show="showParagraph">    	
+        <div class="outputs" ng-show="vm.showParagraph">    	
 		    <p>
 			    <span>{{name}}</span> was a <span>{{jobTitle}}</span> who loved technology. 
 			    Although she loved parts of her job, she absolutely hated  
@@ -55,7 +56,7 @@
 			    only loved <span>{{dirtyTask}}</span> but did it <span>{{number}}</span> times faster.
 		    </p>
 
-		    <button ng-click="showParagraph = !showParagraph">Start Over</button>
+		    <button ng-click="vm.showParagraph = !vm.showParagraph">Start Over</button>
         </div>
     </div>
         <p class="center">Show and Hide</p>
