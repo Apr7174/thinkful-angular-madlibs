@@ -30,20 +30,20 @@
 				<!-- value {{gender.she}} -->
 				<br>
 			    <input type="text" placeholder="name" ng-model="name" required>
-			    <input type="text" placeholder="job title" ng-model="jobTitle">
-			    <input type="text" placeholder="tedious task" ng-model="tediousTask">
-			    <input type="text" placeholder="dirty task" ng-model="dirtyTask">
-			    <input type="text" placeholder="celebrity" ng-model="celebrity">
-			    <input type="text" placeholder="another celebrity" ng-model="celebrityTwo">
-			    <input type="text" placeholder="a skill" ng-model="skill">   
-			    <input type="number" placeholder="a number" ng-model="number">   
+			    <input type="text" placeholder="job title" ng-model="jobTitle" required>
+			    <input type="text" placeholder="tedious task" ng-model="tediousTask" required>
+			    <input type="text" placeholder="dirty task" ng-model="dirtyTask" required>
+			    <input type="text" placeholder="celebrity" ng-model="celebrity" required>
+			    <input type="text" placeholder="another celebrity" ng-model="celebrityTwo" required>
+			    <input type="text" placeholder="a skill" ng-model="skill" required>   
+			    <input type="number" placeholder="a number" ng-model="number" required>   
 			    <br>
 			    <input type="submit" class="showPara" value="Generate My Madlib"/>
 	    	 	<div class="clearfix"></div>
 	    	</form>
 	    </div>
        
-	    <!--  -->	
+
         <div class="outputs" ng-show="showParagraph">
         	<form ng-submit="startOver()">        		
 			    <p>
