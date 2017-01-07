@@ -141,3 +141,19 @@ button:hover {
 	display: inline-block;
 	float: right;
 }
+
+.content {
+  padding: 10px;
+  overflow: hidden;
+  transition: all linear 0.5s;
+}
+
+.content.ng-enter,
+.content.ng-leave.ng-leave-active {
+  max-height:0;
+}
+
+.content.ng-leave,
+.content.ng-enter.ng-enter-active {
+  max-height:1em;
+}

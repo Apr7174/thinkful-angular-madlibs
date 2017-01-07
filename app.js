@@ -1,5 +1,5 @@
 //creates a module
-angular.module('myApp', [])
+angular.module('myApp', ['ngAnimate'])
 	.controller('MyController', function($scope){
 
 		$scope.gender = {

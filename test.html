@@ -9,6 +9,7 @@
 <body ng-controller='formController'>
 	<input type="text" name="name" ng-model="formData.name">
 	<p>Name is: {{formData.name}}</p>
+	<input type="submit" ng-click="submitName()"/>
 
 	<br>
 	<input type="radio" name="gender" value="female" ng-model="formData.gender">Female
@@ -27,6 +28,8 @@
 	<button ng-click="showBox = !showBox">Toggle</button>
 	<div class="box" ng-show="showBox">Box 1 ng-show</div>
 	<div class="box" ng-hide="showBox">Box 2 ng-hide</div>
+
+	<input type="text" name="luna" ng-model="luna">
 
 </body>
 </html>
